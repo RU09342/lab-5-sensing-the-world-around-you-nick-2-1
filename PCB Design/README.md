@@ -1,4 +1,4 @@
-#MSP430FR2311 PCB Design
+# MSP430FR2311 PCB Design
 
 ## Bill of Materials
 
