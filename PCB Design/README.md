@@ -1,5 +1,11 @@
 # MSP430FR2311 PCB Design
 
+## Overview
+
+## Schematic
+
+## 3D Model 
+
 ## Bill of Materials
 
 |Part     |Manufacturer Part #|Brand|Value|Sizes|Package      |Unit Price ($)|Website|
