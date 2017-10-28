@@ -10,22 +10,22 @@ In the image below shows the schematic of the board. It illustrates how the comp
 ## 2D Board
 The layout of the components on the PCB board can be seen in the two images below. The traces connecting each part measure 0.013", while the entire board measure to be 1.199" wide by 1.127" long.
 
-Top
+####Top
 
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/PCB%20Design/Assets/2DBoard.PNG" width="300"/> 
 
-Bottom
+####Bottom
 
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/PCB%20Design/Assets/2DBoardBottom.PNG" width="300"/>
 
 ## 3D Model
 The real world model of the device can be seen below. The components were placed on the top of the board and the header pins placed on the bottom pointing down. Since the PCB will be placed into the bread board this decision allows the MSP430FR2311 chip to be easily seen to distinguish which pin represents which header pin on the board. 
 
-Top
+####Top
 
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/PCB%20Design/Assets/3DBoard.PNG" width="300"/>
 
-Bottom
+####Bottom
 
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/PCB%20Design/Assets/3DBoardBottom.PNG" width="300"/>
 ## Bill of Materials
