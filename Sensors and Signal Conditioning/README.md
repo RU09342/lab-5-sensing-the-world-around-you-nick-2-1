@@ -1,10 +1,11 @@
 # Sensors and Signal Conditioning
+
+## Overview
+For this section of the lab to implement the an ADC12 the MSP430FR5994 was used, while implement an ADC10 the MSP430G2553 was used. 
 <!--- ====================================================== -->
 ## Photoresistor
 
 ### Description
-#### ADC12
-#### ADC10
 
 ### Schematic
 
@@ -18,8 +19,7 @@
 ## Photodiode
 
 ### Description
-#### ADC12
-#### ADC10
+
 
 ### Schematic
 
@@ -32,8 +32,6 @@
 ## Temperature Sensor
 
 ### Description
-#### ADC12
-#### ADC10
 
 ### Schematic
 
