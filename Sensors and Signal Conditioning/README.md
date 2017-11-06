@@ -29,7 +29,7 @@ In order to calculate the current producted by the photodiode, it must be placed
 
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/Photodiode.PNG" width="300"/>
 
-<img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/PhotoDiode.jpg" width="300"/>
+<img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/PhotoDiode.jpg" width="250"/>
 
 
 ### Conclusion
