@@ -26,7 +26,9 @@ Photodiodes are devices that convert light into current. When they are in a dark
 
 ### Schematic
 In order to calculate the current producted by the photodiode, it must be placed in series with a voltage source, a 1kohm resistor, and ground. As seen in the figure below the ADC will read in the voltage just before the resistor. Then the current can be calculated by dividing the voltage by the value of the resistor. 
+
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/Photodiode.PNG" width="300"/>
+
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/PhotoDiode.jpg" width="300"/>
 
 
@@ -42,6 +44,7 @@ The temperature sensor is able to vary its output voltage depending on the tempe
 The circuit to measure current is simple. The outer pins of the sensor are used to connect to Vcc and ground, while the middle pin outputs the variable voltage. The ADC is connected to the middle pin, converting the voltage to a digital value. This value is then taken and converted to celsius, then celsius can easily be converted to fahrenheit. 
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/TempSensor.PNG" width="300"/>
 <img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Sensors%20and%20Signal%20Conditioning/Assets/FR5994_TempSensor.jpg" width="300"/>
+
 
 ### Conclusion
 Finally, once the voltage of the temperature sensor was found the value was transmitted via UART and displayed on RealTerm. This allowed the voltage to be easily viewed and analyzed.
