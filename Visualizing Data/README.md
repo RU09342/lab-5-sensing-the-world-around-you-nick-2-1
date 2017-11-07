@@ -1,18 +1,28 @@
 # Visualizing Data
-In the next lab, we will start looking into how to take action on the information your microprocessor is receiving, for the last part of this lab, we will focus on visualizing the data. We will focus on three main methods of visualization. For each of these methods, you need to pick between 1-3 processors based on the part. As with Milestone 1, you will need to talk in this README about why you picked the processors you did (for one part, it is going to be painfully obvious). Overall, you should aim to use all five processors by the end of this part of the lab, however _YOU DO NOT NEED TO USE ALL FIVE FOR EACH PART_.
+#### Nick<sup>2</sup>
+In this section, the data gathered on the ADC12 is displayed on various peripherals. The display methods used here is a RGB LED and a LCD display.
 
 ## RGB LED
-Hopefully by this point you are fairly comfortable with how to control an RGB LED. To ease into this lab, you should take your sensors and have them correlate to the color, brightness, blinking speed, etc. of an RGB LED. If for your resistive sensor you picked a thermistor, it might make sense to have the RGB change from a "Blue" color to a "Red" color as it heats up. For this, you should pick 3 processors to perform this on. You do not need to use all three sensors on each of the boards. Pick one sensor per board and work off of that.
+### Description
+RGB LEDs have been controlled in the past, but the controller will be sensors instead of UART. 2 sensors were used to control the LED, a temperature sensor, and a photoresistor.
+### Temperature Sensor
+Using the MSPFR5994, a LM34 external temperature sensor is connected to the ADC, whose output will set the value of the LED colors. The circuit must be wired according to the follwing diagram.
+
+<img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Visualizing%20Data/Assets/Temp_RGB_Circuit.PNG"  width="300"/>
+
+The LED will change colors as the temperature rises. At the coldest temperature, it glows blue, and gets more red as the temperature. At room temperature, the LED glows purple. The easiest methods to manipulate the sensor is to use a dry ice pack or a hair dryer.
+### Photo-Resistor
+Using the MSP430F5529, a 10 M&#937; photoresistor is used in a voltage divider. The output of the voltage divider is attached to the ADC input of the MSP430. From there, the resistance is calculated, and used to control the LED. The circiut must be wired according to the following diagram.
+
+<img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Visualizing%20Data/Assets/Photo_RGB_Circuit.PNG" width ="300"/>
+
+The LED changes colors the same as before, but red indicates lower resistance instead of temperature. A demonstration can be found below as a gif.
+
+<img src="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Visualizing%20Data/Assets/LED%20example.gif" width="300"/>
 
 ## LCD Display
-Now that you are getting sensor data and acting on it, why don't you actually try to display the information the user in actual numbers. Using the MSP430FR6989, convert the information from all three of your sensors to a human readable value on the on-board LCD. Fair warning, *DO NOT TRY TO REINVENT THE WHEEL*. Make sure you give the resource explorer a good looking through to see what TI is going to provide you. You can utilize the provided LCDDriver.c and LCDDriver.h files in your code.
+Having an LED visualize data is nice, but it only provides a reference. LEDs cannot provide absolute values for temperature or brightness, but an LCD can. The MSP430FR6989 has a built in LCD Display, and a driver was provided to display alphanumerical characters on the display. The internal ADC takes the values off of the same setup as the photoresistor, but without the LED. The the voltage gets converted and displayed on the LCD display. An example can be found below.
 
-## PC Visualization
-While UART is awesome for talking between processors, it also can be used to stream data back to your computer which you can use software to read. If you want to be adventurous (or if you have experiences in other languages like Python or Java) you can try to make your own visualization software for looking at the sensor data. Instead of that, you need to be able to collect and visualize data through MATLAB using the "Serial Toolbox". It is up to you to figure out how fancy you want your plots to be, but at a minimum, your processor needs to be able to communicate back to MATLAB and you need to be able to plot the data over time back on your laptop. Since this is all UART, I would expect you to do this for at least two processors.
+<img src ="https://github.com/RU09342/lab-5-sensing-the-world-around-you-nick-2-1/blob/master/Visualizing%20Data/Assets/LCD%20example.gif" width="300"/>
 
-## Now its your turn
-For the finale of this lab, pick a processor and run at least two of these visualizations at the same time. You also should look at using multiple channels on the internal ADC, although this is not required.
-
-
-## Deliverables
-For this part of the lab, you need to be able to organize your submissions based on the part of the lab it is fulfilling. If this means using a ton of folders, be my guest, but at the end of the day, I am going to be grading these as if I am someone coming to your repository for information. This whole part can be summarized in one large README which should be *HEAVILY* focused on how to actually implement and use your code. 
+As the light source gets closer, the number on the LCD goes up. The number on the LCD represents Lumens, a measurement commonly used to measure the brightness of flashlights. To calibrate the conversion, a series of known flashlights were used, including the flashlight seen in the example. 
